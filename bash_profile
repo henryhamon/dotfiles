@@ -39,6 +39,9 @@ fi
 
 export EDITOR=vim
 
+# ~/.bin
+export PATH=~/.bin:$PATH
+
 # BREW
 export PATH=/usr/local/bin:$PATH
 

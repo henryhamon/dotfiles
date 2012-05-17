@@ -1,5 +1,3 @@
-# ~/bin Aliases
-export PATH=~/Dropbox/dotfiles/bin:$PATH
 alias sublime="subl"
 
 # Bundler
