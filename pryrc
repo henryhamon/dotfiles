@@ -3,15 +3,15 @@ Pry.config.should_load_plugins = false
 Pry.plugins["doc"].activate!
 Pry.plugins["nav"].activate!
 
-Pry.config.history.file = "~/.irb_history"
+Pry.config.history.file = "~/.pry_history"
 
-Pry.config.prompt = proc do |obj, level, _|
-  prompt = "\e[1;30m"
-  prompt << "#{RUBY_VERSION} "
-  prompt << "(#{level}|#{obj}) "
-  #prompt << "#{Pry::NAV_PROMPT}"
-  "#{prompt}>\e[0m "
-end
+#Pry.config.prompt = proc do |obj, level, _|
+  #prompt = "\e[1;30m"
+  #prompt << "#{RUBY_VERSION} "
+  #prompt << "(#{level}|#{obj}) "
+  ##prompt << "#{Pry::NAV_PROMPT}"
+  #"#{prompt}>\e[0m "
+#end
 
 Pry.config.exception_handler = proc do |output, exception, _|
   output.puts "\e[31m#{exception.class}: #{exception.message}"
@@ -32,7 +32,6 @@ rails = File.join Dir.getwd, 'config', 'environment.rb'
 
 if File.exist?(rails) && ENV['SKIP_RAILS'].nil?
   require rails
-  
   if Rails.version[0..0] == "2"
     require 'console_app'
     require 'console_with_helpers'
