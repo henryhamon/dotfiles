@@ -128,15 +128,15 @@ set formatoptions=crql
 
 syntax enable
 set background=dark
-  "colorscheme solarized
-  "colorscheme molokai
+  " colorscheme solarized
+  " colorscheme molokai
 colorscheme tomorrow-night
 set cursorline   " Highliht cursor line
 set showmatch    " Show matching brackets.
 set mat=2        " How many tenths of a second to blink
 set ruler        " Show rule at the bottom
-set number	 " Show line number
-set nowrap       " Line wrapping off
+set number       " Show line number
+  " set nowrap   " Line wrapping off
 set laststatus=2 " Always show the statusline
 set cmdheight=1
 set mouse=a      " Mouse in all modes
@@ -153,17 +153,16 @@ set list
 set listchars=tab:..,trail:.,extends:#,nbsp:.
 
 " ### Text format and Indetation
-
 set columns=84   " Column break line
 set textwidth=80 " Break text at column 80
 set linespace=4  " add some line space for easy reading
-set ts=2	 " Tab space
+set ts=2         " Tab space
 set bs=2         " Delete everything with backspace
 set cindent
 set smarttab
-set autoindent    " Automatic indent new lines
+set autoindent   " Automatic indent new lines
 set expandtab
-set shiftwidth=2  " Tabs under smart indent
+set shiftwidth=2 " Tabs under smart indent
 set softtabstop=2
 set backspace=2
 
