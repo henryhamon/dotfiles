@@ -105,20 +105,18 @@ map! <C-c> :call TrimWhiteSpace()<CR>
 
 " ## Vim Configuration
 
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set encoding=utf-8 " Set the default file encoding to UTF-8
 set noswapfile " Don't create .swp
 
 " ### Behaviors
 
-set autoread           " Automatically reload changes if detected
+set autoread           " Automatically reload changes in files if detected
 set wildmenu           " Turn on WiLd menu
 set history=500        " Number of things to remember in history.
 set cf                 " Enable error files & error jumping.
 set clipboard+=unnamed " Yanks go on clipboard instead.
 set timeoutlen=250     " Time to wait for a command (after leader for example)
 set foldlevelstart=99  " Remove folds
-set formatoptions=crql
 
 " ### UI, Syntax and ColorScheme
 "
@@ -138,7 +136,7 @@ set ruler        " Show rule at the bottom
 set number       " Show line number
   " set nowrap   " Line wrapping off
 set laststatus=2 " Always show the statusline
-set cmdheight=1
+set cmdheight=1  " Number of lines for commands
 set mouse=a      " Mouse in all modes
 
 " ### Sounds
@@ -157,14 +155,12 @@ set columns=84   " Column break line
 set textwidth=80 " Break text at column 80
 set linespace=4  " add some line space for easy reading
 set ts=2         " Tab space
-set bs=2         " Delete everything with backspace
-set cindent
 set smarttab
 set autoindent   " Automatic indent new lines
 set expandtab
 set shiftwidth=2 " Tabs under smart indent
 set softtabstop=2
-set backspace=2
+set backspace=indent,eol,start
 
 " ### Searching
 
@@ -175,18 +171,9 @@ set hlsearch   " hilight searches by default
 
 " ## Filetype based configuration
 
-"Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
+" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
-
-" md, markdown, and mk are markdown and define buffer-local preview
-
-function s:setupMarkup()
-  call s:setupWrapping()
-  map <buffer> <Leader>p :Hammer<CR>
-endfunction
-
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup(I)
 
 " JSON syntax highlighting
 
