@@ -22,7 +22,9 @@ call pathogen#infect()
 " Generage doc files:
 call pathogen#helptags()
 
-filetype plugin indent on " Automatically detect file types.
+filetype on        " Enable filetype detection
+filetype plugin on " Enable filetype-specific indenting
+filetype indent on " Enable filetype-specific plugins
 
 " ## Plugins and key bindings Configuration
 "
