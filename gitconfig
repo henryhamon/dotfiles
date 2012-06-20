@@ -33,7 +33,7 @@ q
 
 [alias]
   amend = commit --amend -C HEAD
-  st = status
+	st = status -sb
   ci = commit
   br = branch
   co = checkout
