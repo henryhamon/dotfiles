@@ -20,7 +20,7 @@ end
 
 begin
   require "awesome_print"
-  Pry.config.print = proc {|output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)}
+  # Pry.config.print = proc {|output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)}
 rescue LoadError => err
    warn "=> Unable to load awesome_print"
 end
