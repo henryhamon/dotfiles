@@ -7,11 +7,15 @@ export LANG LC_CTYPE LC_ALL
 
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
+# PLUGINS
+source ~/.bash/ssh-instance.bash
+
 # PATH
 
 PATH=/usr/local/bin:$PATH # BREW
 PATH=/usr/local/share/python:$PATH # Python via Brew
 PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
+PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 PATH=$PATH:$HOME/.rvm/bin # RVM
 PATH=$HOME/Development/julia:$PATH # Julia lang
 PATH=$HOME/.bin:$PATH # ~/.bin
@@ -49,6 +53,14 @@ GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_SHOWDIRTYSTATE GIT_PS1_SHOWSTASHSTATE
 export GIT_PS1_SHOWUNTRACKEDFILES GIT_PS1_SHOWUPSTREAM
 
+__git_ps1 () 
+{ 
+    local b="$(git symbolic-ref HEAD 2>/dev/null)";
+    if [ -n "$b" ]; then
+        printf " (%s)" "${b##refs/heads/}";
+    fi
+}
+
 PROMPT_GIT='$(__git_ps1 "'${BLUE}' (%s)'${RESET}'")'
 PS1="[${WHITE}\u@\h \W${PROMPT_GIT}]\$ "
 PS2="${BOLD}..>${RESET} "
@@ -66,4 +78,3 @@ esac
 if [ "$TERM" != "dumb" ]; then
     export LS_OPTIONS='--color=auto'
 fi
-
