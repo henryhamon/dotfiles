@@ -25,3 +25,7 @@ alias rm="rmtrash" # brew install rmtrash
 
 # Mac
 alias locate="mdfind"
+
+function chrome() {
+  open $@ --args --allow-file-access-from-files
+}
