@@ -1,9 +1,14 @@
 {
-	"auto_upgrade_last_run": 1340846934,
+	"auto_upgrade_last_run": 1348422060,
 	"installed_packages":
 	[
 		"CTags",
+		"DetectSyntax",
+		"ERB Insert and Toggle Commands",
+		"LESS",
+		"Live CSS",
 		"Package Control",
-		"Theme - Soda"
+		"Theme - Soda",
+		"ZenCoding"
 	]
 }

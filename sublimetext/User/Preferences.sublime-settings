@@ -1,16 +1,6 @@
 {
-	"theme": "Soda Light.sublime-theme",
 	"color_scheme": "Packages/User/Tomorrow-Night-Bright-Alf.tmTheme",
-	"highlight_line": true,
-	"highlight_modified_tabs": true,
-	//
 	"ensure_newline_at_eof_on_save": true,
-	"tab_size": 2,
-	"translate_tabs_to_spaces": true,
-	//
-	"ignored_packages": [],
-	"vintage_start_in_command_mode": true,
-	//
 	"file_exclude_patterns":
 	[
 		".DS_Store",
@@ -50,5 +40,16 @@
 		"bin",
 		"script",
 		"tmp"
-	]
+	],
+	"font_face": "Inconsolata",
+	"font_size": 14.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+	],
+	"tab_size": 2,
+	"theme": "Soda Light.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"vintage_start_in_command_mode": true
 }
