@@ -7,9 +7,6 @@ export LANG LC_CTYPE LC_ALL
 
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
-# PLUGINS
-source ~/.bash/ssh-instance.bash
-
 # PATH
 
 PATH=/usr/local/bin:$PATH # BREW
