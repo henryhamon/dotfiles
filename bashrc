@@ -58,17 +58,8 @@ GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_SHOWDIRTYSTATE GIT_PS1_SHOWSTASHSTATE
 export GIT_PS1_SHOWUNTRACKEDFILES GIT_PS1_SHOWUPSTREAM
 
-__git_ps1 () 
-{ 
-    local b="$(git symbolic-ref HEAD 2>/dev/null)";
-    if [ -n "$b" ]; then
-        printf " (\033[0;32m%s\033[0;37m)" "${b##refs/heads/}";
-    fi
-}
-
 PROMPT_GIT='$(__git_ps1 "'${BLUE}' (%s)'${RESET}'")'
 PS1="${BLUE}\u${WHITE}@${BLUE}\h ${WHITE}\W${PROMPT_GIT}${RESET}\$ "
-PS2="${BOLD}..>${RESET} "
 
 # TITLEBAR
 
