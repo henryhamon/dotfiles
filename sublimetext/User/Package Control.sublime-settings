@@ -1,13 +1,13 @@
 {
-	"auto_upgrade_last_run": 1348542497,
+	"auto_upgrade_last_run": 1349098076,
 	"installed_packages":
 	[
 		"CTags",
-		"DetectSyntax",
 		"ERB Insert and Toggle Commands",
 		"LESS",
 		"Live CSS",
 		"Package Control",
+		"SublimeJava",
 		"Theme - Soda",
 		"ZenCoding"
 	]
