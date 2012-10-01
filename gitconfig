@@ -1,12 +1,12 @@
 [user]
-  name = Alan Fachini
-  email = alfakini@gmail.com
+	name = Alan Fachini
+	email = alfakini@gmail.com
 
 [core]
   editor = vim
   excludesfile = ~/.gitignore
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-  quotepath = false
+	quotepath = false
 
 [color]
 	ui = auto
@@ -46,3 +46,5 @@ q
   ign = ls-files -o -i --exclude-standard
   stash-unapply = !git stash show -p | git apply -R
 
+[mergetool]
+	keepBackup = true
