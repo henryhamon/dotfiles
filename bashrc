@@ -11,8 +11,12 @@ export LANG LC_CTYPE LC_ALL
 
 PATH=/usr/local/bin:$PATH # BREW
 PATH=/usr/local/share/python:$PATH # Python via Brew
+
+GROOVY_HOME=/usr/local/Cellar/groovy/2.0.4/libexec
+
 PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
 PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+
 PATH=$PATH:$HOME/.rvm/bin # RVM
 PATH=$HOME/Development/julia:$PATH # Julia lang
 PATH=$HOME/.bin:$PATH # ~/.bin
@@ -20,7 +24,7 @@ PATH=$HOME/.bin:$PATH # ~/.bin
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-export PATH PYTHONPATH
+export PATH PYTHONPATH GROOVY_HOME
 
 EDITOR=vim
 FIGNORE="~:.pyc:.swp:.swa:.git" # things to ignore during tab completion
@@ -58,12 +62,12 @@ __git_ps1 ()
 { 
     local b="$(git symbolic-ref HEAD 2>/dev/null)";
     if [ -n "$b" ]; then
-        printf " (%s)" "${b##refs/heads/}";
+        printf " (\033[0;32m%s\033[0;37m)" "${b##refs/heads/}";
     fi
 }
 
 PROMPT_GIT='$(__git_ps1 "'${BLUE}' (%s)'${RESET}'")'
-PS1="[${WHITE}\u@\h \W${PROMPT_GIT}]\$ "
+PS1="${BLUE}\u${WHITE}@${BLUE}\h ${WHITE}\W${PROMPT_GIT}${RESET}\$ "
 PS2="${BOLD}..>${RESET} "
 
 # TITLEBAR
