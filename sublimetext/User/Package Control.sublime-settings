@@ -1,5 +1,5 @@
 {
-	"auto_upgrade_last_run": 1349098076,
+	"auto_upgrade_last_run": 1349131554,
 	"installed_packages":
 	[
 		"CTags",
@@ -7,6 +7,7 @@
 		"LESS",
 		"Live CSS",
 		"Package Control",
+		"SideBarEnhancements",
 		"SublimeJava",
 		"Theme - Soda",
 		"ZenCoding"
