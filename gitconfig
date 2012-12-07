@@ -4,12 +4,16 @@
 
 [core]
   editor = vim
-  excludesfile = ~/.gitignore
+	excludesfile = /Users/alfakini/.gitignore
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	quotepath = false
 
+[grep]
+  lineNumber = true
+  extendedRegexp = true
+
 [color]
-	ui = auto
+	ui = 1
 
 [web]
   browser = google-chrome
@@ -48,3 +52,9 @@ q
 
 [mergetool]
 	keepBackup = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

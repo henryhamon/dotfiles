@@ -17,6 +17,3 @@
 [submodule "other/tomorrow-theme"]
 	path = other/tomorrow-theme
 	url = https://github.com/chriskempson/tomorrow-theme
-[submodule "sublimetext/Packages/groovy-grails.tmbundle"]
-	path = sublimetext/Packages/groovy-grails.tmbundle
-	url = https://github.com/textmate/groovy-grails.tmbundle
