@@ -12,19 +12,21 @@ export LANG LC_CTYPE LC_ALL
 PATH=/usr/local/bin:$PATH # BREW
 PATH=/usr/local/share/python:$PATH # Python via Brew
 
+JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 GROOVY_HOME=/usr/local/Cellar/groovy/2.0.4/libexec
+SCALA_HOME=/usr/local/Cellar/scala/2.9.2/libexec
 
 PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
 PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 PATH=$PATH:$HOME/.rvm/bin # RVM
-PATH=$HOME/Development/julia:$PATH # Julia lang
 PATH=$HOME/.bin:$PATH # ~/.bin
+PATH=$PATH:"/usr/local/share/npm/bin/"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-export PATH PYTHONPATH GROOVY_HOME
+export PATH PYTHONPATH JAVA_HOME GROOVY_HOME SCALA_HOME
 
 EDITOR=vim
 FIGNORE="~:.pyc:.swp:.swa:.git" # things to ignore during tab completion
@@ -74,3 +76,5 @@ esac
 if [ "$TERM" != "dumb" ]; then
     export LS_OPTIONS='--color=auto'
 fi
+
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
