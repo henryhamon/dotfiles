@@ -12,7 +12,7 @@ export LANG LC_CTYPE LC_ALL
 PATH=/usr/local/bin:$PATH # BREW
 PATH=/usr/local/share/python:$PATH # Python via Brew
 
-JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home
 GROOVY_HOME=/usr/local/Cellar/groovy/2.0.4/libexec
 SCALA_HOME=/usr/local/Cellar/scala/2.9.2/libexec
 
@@ -23,6 +23,9 @@ PATH=$PATH:$HOME/.rvm/bin # RVM
 PATH=$HOME/.bin:$PATH # ~/.bin
 PATH=$PATH:"/usr/local/share/npm/bin/"
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+
+MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
@@ -36,12 +39,8 @@ export EDITOR FIGNORE
 
 # TAB COMPLETITION
 
- if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
-  fi
-
-if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-. /usr/local/etc/bash_completion.d/git-completion.bash
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
 fi
 
 # PROMPT COLORS (after installing GNU coreutils)
@@ -53,6 +52,12 @@ GREEN="\[\033[0;32m\]"
 RESET="\[\033[0m\]"
 WHITE="\[\033[0;37m\]"
 GRAY="\[\033[1;30m\]"
+
+# GIT PROMPT
+
+if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+fi
 
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
@@ -78,4 +83,6 @@ if [ "$TERM" != "dumb" ]; then
     export LS_OPTIONS='--color=auto'
 fi
 
-[[ -s "$HOME/.gvm/bin/gvm-init.sh" ]] && source "$HOME/.gvm/bin/gvm-init.sh"
+#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
+[[ -s "/Users/alfakini/.gvm/bin/gvm-init.sh" && ! $(which gvm-init.sh) ]] && source "/Users/alfakini/.gvm/bin/gvm-init.sh"
+
