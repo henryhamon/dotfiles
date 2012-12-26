@@ -21,7 +21,6 @@ alias h=history
 alias e="exit"
 alias c="clear"
 alias del="rm"
-alias rm="rmtrash" # brew install rmtrash
 
 # Mac
 alias locate="mdfind"
