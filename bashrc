@@ -21,7 +21,7 @@ PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 PATH=$PATH:$HOME/.rvm/bin # RVM
 PATH=$HOME/.bin:$PATH # ~/.bin
-PATH=$PATH:"/usr/local/share/npm/bin/"
+PATH=$PATH:"/usr/local/share/npm/bin"
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
