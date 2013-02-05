@@ -86,3 +86,6 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/alfakini/.gvm/bin/gvm-init.sh" && ! $(which gvm-init.sh) ]] && source "/Users/alfakini/.gvm/bin/gvm-init.sh"
 
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
