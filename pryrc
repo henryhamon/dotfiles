@@ -1,3 +1,5 @@
+# gem install pry pry-doc pry-nay awesome_print
+
 # Load plugins (only those I whitelist)
 Pry.config.should_load_plugins = false
 Pry.plugins["doc"].activate!
