@@ -3,7 +3,7 @@
 	email = alfakini@gmail.com
 
 [core]
-  editor = vim
+  editor = subl
 	excludesfile = /Users/alfakini/.gitignore
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
 	quotepath = false
@@ -58,3 +58,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+[pull]
+	rebase = true
