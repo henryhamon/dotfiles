@@ -3,50 +3,7 @@ LC_CTYPE="en_US.UTF-8"
 LC_ALL="en_US.UTF-8"
 export LANG LC_CTYPE LC_ALL
 
-# ALIASES
-
-[ -f ~/.bash_aliases ] && . ~/.bash_aliases
-
-# PATH
-
-PATH=/usr/local/bin:$PATH # BREW
-PATH=/usr/local/share/python:$PATH # Python via Brew
-
-JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home
-GROOVY_HOME=/usr/local/Cellar/groovy/2.0.4/libexec
-SCALA_HOME=/usr/local/Cellar/scala/2.9.2/libexec
-
-PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
-PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-
-PATH=$PATH:$HOME/.rvm/bin # RVM
-PATH=$HOME/.bin:$PATH # ~/.bin
-PATH=$PATH:"/usr/local/share/npm/bin"
-PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
-PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-
-MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-
-export ACKRC=".ackrc"
-
-# RVM
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-export PATH PYTHONPATH JAVA_HOME GROOVY_HOME SCALA_HOME
-
-EDITOR=vim
-FIGNORE="~:.pyc:.swp:.swa:.git" # things to ignore during tab completion
-
-export EDITOR FIGNORE
-
-# TAB COMPLETITION
-
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
-fi
-
 # PROMPT COLORS (after installing GNU coreutils)
-
 BOLD="\[\033[1m\]"
 BLUE="\[\033[0;34m\]"
 CYAN="\[\033[0;36m\]"
@@ -55,8 +12,40 @@ RESET="\[\033[0m\]"
 WHITE="\[\033[0;37m\]"
 GRAY="\[\033[1;30m\]"
 
-# GIT PROMPT
+# ALIASES
+[ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
+# PATH
+PATH=/usr/local/bin:$PATH # BREW PATH
+
+# LANGS PATH
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_10.jdk/Contents/Home
+GROOVY_HOME=/usr/local/Cellar/groovy/2.0.4/libexec
+SCALA_HOME=/usr/local/Cellar/scala/2.9.2/libexec
+PYTHONPATH=/usr/local/lib/python:$PYTHONPATH
+PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+
+PATH=$PATH:$HOME/.rvm/bin # RVM PATH
+PATH=$PATH:"/usr/local/share/npm/bin" # NPM NODEJS PATH
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH" # POSTGRES.APP PATH
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # GNU CORE UTILS PATH
+PATH=$HOME/.bin:$PATH # MY ~/.bin PATH
+
+export PATH PYTHONPATH JAVA_HOME GROOVY_HOME SCALA_HOME
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # MAN PATH
+export ACKRC=".ackrc" # ACK PATH
+
+EDITOR=subl
+FIGNORE="~:.pyc:.swp:.swa:.git" # things to ignore during tab completion
+
+export EDITOR FIGNORE
+
+# TAB COMPLETITION
+if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
+  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+fi
+
+# GIT PROMPT
 if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
   . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
 fi
@@ -71,23 +60,16 @@ export GIT_PS1_SHOWUNTRACKEDFILES GIT_PS1_SHOWUPSTREAM
 PROMPT_GIT='$(__git_ps1 "'${BLUE}' (%s)'${RESET}'")'
 PS1="${BLUE}\u${WHITE}@${BLUE}\h ${WHITE}\W${PROMPT_GIT}${RESET}\$ "
 
-# TITLEBAR
-
-TITLEBAR='\[\033]0;\h:\w (\j jobs) \007\]'
-case "$TERM_PROGRAM" in
-  "Apple_Terminal")PS1="$TITLEBAR$PS1"
-esac
-case "$TERM" in
-  "xterm")PS1="$TITLEBAR$PS1"
-esac
-
+# COLORS
 if [ "$TERM" != "dumb" ]; then
     export LS_OPTIONS='--color=auto'
 fi
 
-#THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
-[[ -s "/Users/alfakini/.gvm/bin/gvm-init.sh" && ! $(which gvm-init.sh) ]] && source "/Users/alfakini/.gvm/bin/gvm-init.sh"
+# RVM CONFIG
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
+# GVM CONFIG
+[[ -s "$HOME/.gvm/bin/gvm-init.sh" && ! $(which gvm-init.sh) ]] && source "$HOME/.gvm/bin/gvm-init.sh"
 
-### Added by the Heroku Toolbelt
+# HEROKU CONFIG
 export PATH="/usr/local/heroku/bin:$PATH"

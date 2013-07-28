@@ -1,19 +1,19 @@
 [user]
-	name = Alan Fachini
-	email = alfakini@gmail.com
+  name = Alan Fachini
+  email = alfakini@gmail.com
 
 [core]
   editor = subl
-	excludesfile = /Users/alfakini/.gitignore
+  excludesfile = /Users/alfakini/.gitignore
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	quotepath = false
+  quotepath = false
 
 [grep]
   lineNumber = true
   extendedRegexp = true
 
 [color]
-	ui = 1
+  ui = 1
 
 [web]
   browser = google-chrome
@@ -37,7 +37,7 @@
 
 [alias]
   amend = commit --amend -C HEAD
-	st = status -sb
+  st = status -sb
   ci = commit
   br = branch
   co = checkout
@@ -51,12 +51,12 @@
   stash-unapply = !git stash show -p | git apply -R
 
 [mergetool]
-	keepBackup = true
+  keepBackup = true
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
 [pull]
-	rebase = true
+  rebase = true
