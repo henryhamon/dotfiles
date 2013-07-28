@@ -1,4 +1,9 @@
 ssh/
+sublimetext/User/Floobits.sublime-settings
+sublimetext/User/Package\ Control.cache/
+sublimetext/User/Package\ Control.last-run
+sublimetext/User/Package\ Control.ca-list
+sublimetext/User/Package\ Control.ca-bundle
 vim/.netrwhist
 Colorized*.tmTheme
 *.tmTheme.cache
