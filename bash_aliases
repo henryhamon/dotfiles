@@ -22,7 +22,7 @@ alias c="clear"
 alias del="rm"
 
 # Mac
-if ["$(uname)" == "Darwin"]; then
+if [ "$(uname)" == "Darwin" ]; then
   alias ls="gls --color"
   alias locate="mdfind"
 fi

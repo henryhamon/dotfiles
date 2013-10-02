@@ -19,7 +19,7 @@ GRAY="\[\033[1;30m\]"
 PATH=/usr/local/bin:$PATH # BREW PATH
 
 # LANGS PATH
-if ["$(uname)" == "Darwin"]; then
+if [ "$(uname)" == "Darwin" ]; then
   JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_25.jdk/Contents/Home
   GROOVY_HOME=/usr/local/Cellar/groovy/2.0.4/libexec
   SCALA_HOME=/usr/local/Cellar/scala/2.9.2/libexec
@@ -29,7 +29,7 @@ if ["$(uname)" == "Darwin"]; then
 fi
 
 PATH=$PATH:$HOME/.rvm/bin # RVM PATH
-if ["$(uname)" == "Darwin"]; then
+if [ "$(uname)" == "Darwin" ]; then
   PATH=$PATH:"/usr/local/share/npm/bin" # NPM NODEJS PATH
   PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH" # POSTGRES.APP PATH
   PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # GNU CORE UTILS PATH
@@ -37,7 +37,7 @@ fi
 PATH=$HOME/.bin:$PATH # MY ~/.bin PATH
 export PATH
 
-if ["$(uname)" == "Darwin"]; then
+if [ "$(uname)" == "Darwin" ]; then
   export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # MAN PATH
 fi
 export ACKRC=".ackrc" # ACK PATH
@@ -48,24 +48,30 @@ FIGNORE="~:.pyc:.swp:.swa:.git" # things to ignore during tab completion
 export EDITOR FIGNORE
 
 # TAB COMPLETITION
-if ["$(uname)" == "Darwin"]; then
+if [ "$(uname)" == "Darwin" ]; then
   if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
     . `brew --prefix`/etc/bash_completion.d/git-completion.bash
   fi
-elif ["$(uname -o)" == "GNU/Linux"]; then
+elif [ "$(uname -o)" == "GNU/Linux" ]; then
   if ! shopt -oq posix; then
-    if [-f /usr/share/bash-completion/bash_completion]; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
       . /usr/share/bash-completion/bash_completion
-    elif [-f /etc/bash_completion]; then
+    elif [ -f /etc/bash_completion ]; then
       . /etc/bash_completion
     fi
   fi
 fi
 
 # GIT PROMPT
-if ["$(uname)" == "Darwin"]; then
+if [ "$(uname)" == "Darwin" ]; then
   if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
     . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
+  fi
+elif [ "$(uname -o)" == "GNU/Linux" ]; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion/git
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion/git
   fi
 fi
 
