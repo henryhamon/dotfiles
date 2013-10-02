@@ -6,3 +6,4 @@ cobertura.ser
 *.sublime-project
 *.sublime-workspace
 dump.rdb
+.ruby-version

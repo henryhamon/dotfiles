@@ -13,7 +13,6 @@ alias migrate="bundle exec rake db:migrate"
 
 # Shell
 alias l="ls"
-alias ls="gls --color"
 alias cd..="cd .."
 alias ..="cd .."
 alias mkdir="mkdir -p"
@@ -23,7 +22,10 @@ alias c="clear"
 alias del="rm"
 
 # Mac
-alias locate="mdfind"
+if ["$(uname)" == "Darwin"]; then
+  alias ls="gls --color"
+  alias locate="mdfind"
+fi
 
 function chrome() {
   open $@ --args --allow-file-access-from-files
