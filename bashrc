@@ -68,10 +68,8 @@ if [ "$(uname)" == "Darwin" ]; then
     . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
   fi
 elif [ "$(uname -o)" == "GNU/Linux" ]; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion/git
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion/git
+  if [ -f /usr/share/bash-completion/completions/git ]; then
+    . /usr/share/bash-completion/completions/git
   fi
 fi
 
