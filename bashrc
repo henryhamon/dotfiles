@@ -97,3 +97,5 @@ fi
 # HEROKU CONFIG
 export PATH="/usr/local/heroku/bin:$PATH"
 eval "$(rbenv init -)"
+
+export CSDIR="/Users/alfakini/Code/cloudservices/trunk/EdgeProcessing"
