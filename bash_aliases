@@ -11,6 +11,10 @@ alias gemi="gem install"
 # Rails
 alias migrate="bundle exec rake db:migrate"
 
+#Postgres
+alias pgstart="pg_ctl start -l /usr/local/var/postgres.log -D /usr/local/var/postgres"
+alias pgstop="pg_ctl stop -D /usr/local/var/postgres"
+
 # Shell
 alias l="ls"
 alias cd..="cd .."
