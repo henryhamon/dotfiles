@@ -4,5 +4,21 @@
     [
       { "key": "selector", "operator": "equal", "operand": "text.html.ruby, text.haml, source.yaml, source.css, source.scss, source.js, source.coffee" }
     ]
+  },
+   // Convert Ruby 1.8 hashes to Ruby 1.9 syntax
+  {
+    "keys": ["super+shift+h"],
+    "command": "hash_syntax"
+  },
+  // Insert 'binding.pry' with cmd+b+b, 'binding.remote_pry' with cmd+b+r
+  {
+    "keys": ["super+b", "super+b"],
+    "command": "insert_snippet",
+    "args": {"name": "Packages/User/snippets/pry.sublime-snippet"}
+  },
+  {
+    "keys": ["super+b", "super+r"],
+    "command": "insert_snippet",
+    "args": {"name": "Packages/User/snippets/pry_remote.sublime-snippet"}
   }
 ]
