@@ -1,0 +1,24 @@
+{
+	"installed_packages":
+	[
+		"BeautifyRuby",
+		"BracketHighlighter",
+		"DashDoc",
+		"Emmet",
+		"ERB Snippets",
+		"GitGutter",
+		"LaTeX-cwl",
+		"LaTeXing",
+		"LaTeXTools",
+		"oauthlib",
+		"Ruby Block Converter",
+		"SCSS",
+		"SideBarEnhancements",
+		"SublimeERB",
+		"SublimeLinter",
+		"SublimeLinter-flake8",
+		"SublimeLinter-jshint",
+		"SublimeLinter-rubocop",
+		"Theme - Soda"
+	]
+}

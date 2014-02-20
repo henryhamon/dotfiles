@@ -1,11 +1,22 @@
 ssh/
-sublimetext/User/Floobits.sublime-settings
-sublimetext/User/Package\ Control.cache/
-sublimetext/User/Package\ Control.last-run
-sublimetext/User/Package\ Control.ca-list
-sublimetext/User/Package\ Control.ca-bundle
+Sublime\ Text\ 3/User/Floobits.sublime-settings
+Sublime\ Text\ 3/User/Package\ Control.cache/
+Sublime\ Text\ 3/User/Package\ Control.last-run
+Sublime\ Text\ 3/User/Package\ Control.ca-list
+Sublime\ Text\ 3/User/Package\ Control.ca-bundle
+Sublime\ Text\ 3/Cache/*
+Sublime\ Text\ 3/Backup/*
+Sublime\ Text\ 3/Index/*
+Sublime\ Text\ 3/User/Package\ Control.cache
+Sublime\ Text\ 3/Local/*
+Sublime\ Text\ 3/Installed\ Packages/*
+Sublime\ Text\ 3/Packages/*
+Sublime\ Text\ 3/User/Package Control.last-run
+Sublime\ Text\ 3/User/Package Control.system-ca-bundle
 vim/.netrwhist
 Colorized*.tmTheme
+BKPSBLM
+BKP3Sbl
 *.tmTheme.cache
 *.swp
 *.bkp
