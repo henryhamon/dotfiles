@@ -20,5 +20,12 @@
     "keys": ["super+b", "super+r"],
     "command": "insert_snippet",
     "args": {"name": "Packages/User/snippets/pry_remote.sublime-snippet"}
+  },
+  {
+    "keys": ["super+shift+'"],
+    "command": "change_quotes"
+  },
+  {
+    "keys": ["super+g","super+g"], "command": "git_commit_msg"
   }
 ]

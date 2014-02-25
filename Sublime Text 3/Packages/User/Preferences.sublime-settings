@@ -64,6 +64,15 @@
 	"ignored_packages":
 	[
 	],
+	"new_window_settings":
+	{
+		"show_minimap": false
+	},
+	"rulers":
+	[
+		120
+	],
+	"show_full_path": true,
 	"tab_size": 2,
 	"theme": "Soda Light 3.sublime-theme",
 	"translate_tabs_to_spaces": true,
