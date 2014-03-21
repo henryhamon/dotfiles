@@ -12,12 +12,12 @@
   },
   // Insert 'binding.pry' with cmd+b+b, 'binding.remote_pry' with cmd+b+r
   {
-    "keys": ["super+b", "super+b"],
+    "keys": ["super+r", "super+b"],
     "command": "insert_snippet",
     "args": {"name": "Packages/User/snippets/pry.sublime-snippet"}
   },
   {
-    "keys": ["super+b", "super+r"],
+    "keys": ["super+r", "super+r"],
     "command": "insert_snippet",
     "args": {"name": "Packages/User/snippets/pry_remote.sublime-snippet"}
   },
