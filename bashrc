@@ -24,6 +24,7 @@ fi
 PATH=$PATH:/usr/local/opt/coreutils/libexec/gnubin/ # GNU CORE UTILS PATH
 PATH=$PATH:$HOME/.bin/ # MY ~/.bin PATH
 PATH=/usr/local/bin/:$PATH
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export PATH
 
@@ -62,4 +63,7 @@ if [ "$TERM" != "dumb" ]; then
     export LS_OPTIONS='--color=auto'
 fi
 
-eval "$(rbenv init -)"
+# R, WGCNA library
+ALLOW_WGCNA_THREADS=4
+export ALLOW_WGCNA_THREADS
+
