@@ -14,6 +14,7 @@ export CC=/usr/bin/gcc-4.2
 brew install ack git git-extras readline coreutils binutils bash-completion libksba
 brew install rbenv ruby-build
 brew install node
+brew install redis
 gem instal rubocop
 gem install awesome_print
 gem install pry_doc
