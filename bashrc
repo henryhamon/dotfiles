@@ -63,7 +63,7 @@ if [ "$TERM" != "dumb" ]; then
     export LS_OPTIONS='--color=auto'
 fi
 
-# R, WGCNA library
-ALLOW_WGCNA_THREADS=4
-export ALLOW_WGCNA_THREADS
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+eval "$(pyenv init -)"
