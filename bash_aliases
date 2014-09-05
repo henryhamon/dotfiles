@@ -3,7 +3,8 @@ alias sublime="subl"
 # Bundler
 alias b="bundle"
 alias be="bundle exec"
-alias bake="bundle exec rake"
+alias bake="be rake"
+alias best="be ruby -I test/"
 
 # Rubygems
 alias gemi="gem install"

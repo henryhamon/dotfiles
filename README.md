@@ -7,6 +7,9 @@
 ```
 brew update
 brew tap homebrew/dupes
+
+brew install caskroom/cask/brew-cask
+
 brew install mobile-shell
 brew install autoconf automake apple-gcc42
 brew install the_silver_searcher libiconv wget
