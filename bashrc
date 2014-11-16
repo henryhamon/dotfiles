@@ -21,11 +21,10 @@ if [ "$(uname)" == "Darwin" ]; then
   export JAVA_HOME
 fi
 
-PATH=$PATH:/usr/local/opt/coreutils/libexec/gnubin/ # GNU CORE UTILS PATH
-PATH=$PATH:$HOME/.bin/ # MY ~/.bin PATH
-PATH=/usr/local/bin/:$PATH
+PATH=$PATH:/usr/local/opt/coreutils/libexec/gnubin # GNU CORE UTILS PATH
+PATH=$PATH:$HOME/.bin # MY ~/.bin PATH
+PATH=/usr/local/bin:$PATH
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 export PATH
 
 if [ "$(uname)" == "Darwin" ]; then
@@ -39,15 +38,12 @@ FIGNORE="~:.pyc:.swp:.swa:.git" # things to ignore during tab completion
 export EDITOR FIGNORE
 
 # TAB COMPLETITION
-if [ -f `brew --prefix`/etc/bash_completion.d/git-completion.bash ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-completion.bash
+if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
+  . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 fi
 
 # GIT PROMPT
-if [ -f `brew --prefix`/etc/bash_completion.d/git-prompt.sh ]; then
-  . `brew --prefix`/etc/bash_completion.d/git-prompt.sh
-fi
-
+source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=1
 GIT_PS1_SHOWSTASHSTATE=1
 GIT_PS1_SHOWUNTRACKEDFILES=1
@@ -63,7 +59,6 @@ if [ "$TERM" != "dumb" ]; then
     export LS_OPTIONS='--color=auto'
 fi
 
-export JAVA_HOME=`/usr/libexec/java_home -v 1.7`
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 eval "$(pyenv init -)"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
