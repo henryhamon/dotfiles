@@ -72,6 +72,10 @@
 	{
 		"show_minimap": false
 	},
+	"ruby_eval":
+	{
+		"ruby": "ruby"
+	},
 	"rulers":
 	[
 		120,

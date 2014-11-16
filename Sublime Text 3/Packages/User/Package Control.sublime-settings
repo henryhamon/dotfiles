@@ -4,6 +4,7 @@
 		"BeautifyRuby",
 		"BracketHighlighter",
 		"DashDoc",
+		"Dockerfile Syntax Highlighting",
 		"Emmet",
 		"ERB Snippets",
 		"GitCommitMsg",
@@ -18,12 +19,16 @@
 		"LESS",
 		"oauthlib",
 		"Ruby Block Converter",
+		"Ruby on Rails snippets",
+		"RubyEval",
 		"SCSS",
 		"SideBarEnhancements",
 		"SublimeERB",
 		"SublimeLinter",
 		"SublimeLinter-flake8",
 		"SublimeLinter-rubocop",
-		"Theme - Soda"
+		"Theme - Glacier",
+		"Theme - Soda",
+		"Vagrant"
 	]
 }
