@@ -1,4 +1,5 @@
 ssh/
+.DS_Store
 Sublime\ Text\ 3/User/Floobits.sublime-settings
 Sublime\ Text\ 3/User/Package\ Control.cache/
 Sublime\ Text\ 3/User/Package\ Control.last-run
