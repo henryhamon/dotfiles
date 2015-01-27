@@ -4,13 +4,15 @@
 	"caret_style": "phase",
 	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
 	"detect_indentation": true,
-	"dictionary": "Packages/Language - Portuguese/Portuguese (Brazilian).dic",
+	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
 	"ensure_newline_at_eof_on_save": true,
 	"fade_fold_buttons": false,
 	"file_exclude_patterns":
 	[
 		".DS_Store",
+		".Rhistory",
+		".Rbuildignore",
 		".tags*",
 		"*.pyc",
 		"*.pyo",
@@ -38,12 +40,12 @@
 		"*.synctex.gz",
 		"*.blg",
 		"*.brf",
-		"*.bbl",
-		"*.cls"
+		"*.bbl"
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
+		".Rproj.user",
 		"data",
 		".git",
 		".svn",
@@ -62,11 +64,12 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 12.0,
+	"font_size": 11.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
+		"Markdown"
 	],
 	"new_window_settings":
 	{

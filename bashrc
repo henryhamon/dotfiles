@@ -38,21 +38,24 @@ FIGNORE="~:.pyc:.swp:.swa:.git" # things to ignore during tab completion
 export EDITOR FIGNORE
 
 # TAB COMPLETITION
-if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
-  . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
-fi
+. ~/.bin/git-completion.bash
 
 # GIT PROMPT
-source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWSTASHSTATE=1
-GIT_PS1_SHOWUNTRACKEDFILES=1
-GIT_PS1_SHOWUPSTREAM="auto"
-export GIT_PS1_SHOWDIRTYSTATE GIT_PS1_SHOWSTASHSTATE
-export GIT_PS1_SHOWUNTRACKEDFILES GIT_PS1_SHOWUPSTREAM
-
-PROMPT_GIT='$(__git_ps1 "'${BLUE}' (%s)'${RESET}'")'
-PS1="${BLUE}\u${WHITE}@${BLUE}\h ${WHITE}\W${PROMPT_GIT}${RESET}\n\$ "
+if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
+  GIT_PROMPT_THEME="Custom"
+  GIT_PROMPT_ONLY_IN_REPO=0
+  GIT_PROMPT_START="${BLUE}\u${WHITE}@${BLUE}\h${WHITE} \W"
+  GIT_PROMPT_END="${RESET}\n$ "
+  source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
+fi
+# source ~/.bin/git-prompt.sh
+# GIT_PS1_SHOWDIRTYSTATE=1
+# GIT_PS1_SHOWSTASHSTATE=1
+# GIT_PS1_SHOWUNTRACKEDFILES=1
+# GIT_PS1_SHOWUPSTREAM="auto"
+# export GIT_PS1_SHOWDIRTYSTATE GIT_PS1_SHOWSTASHSTATE
+# export GIT_PS1_SHOWUNTRACKEDFILES GIT_PS1_SHOWUPSTREAM
+# PROMPT_GIT='$(__git_ps1 "'${BLUE}' (%s)'${RESET}'")'
 
 # COLORS
 if [ "$TERM" != "dumb" ]; then

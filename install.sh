@@ -22,6 +22,7 @@ brew install trash
 brew install ack the_silver_searcher
 brew install wget
 brew install git git-extras
+brew install bash-git-prompt
 brew install bash-completion
 brew install libiconv
 brew install autoconf automake apple-gcc42
@@ -40,12 +41,10 @@ brew install brew-cask
 
 apps=(
   google-drive
-  google-hangouts
   google-chrome
   firefox
-  opera
   dropbox
-  onepassword
+  1password
   alfred
   caffeine
   appcleaner
@@ -67,16 +66,18 @@ apps=(
   screenflick
   slack
   iterm2
-  sublime-text3
+  sublime-text
   github
   tower
   pgadmin3
   virtualbox
   vagrant
   mendeley-desktop
+  mactex
+  evernote
+  skitch
+  skim
 )
-
-brew cask install --appdir="/Applications" vagrant
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications

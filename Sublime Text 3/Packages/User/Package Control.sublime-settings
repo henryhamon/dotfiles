@@ -1,34 +1,44 @@
 {
+	"in_process_packages":
+	[
+	],
+	"installed_dependencies":
+	[
+		"0_package_control_loader",
+		"bz2"
+	],
 	"installed_packages":
 	[
+		"AutoWrap",
 		"BeautifyRuby",
 		"BracketHighlighter",
 		"DashDoc",
-		"Dockerfile Syntax Highlighting",
+		"Dictionaries",
 		"Emmet",
 		"ERB Snippets",
-		"GitCommitMsg",
-		"GitGutter",
+		"Evernote",
+		"GitGutter-Edge",
 		"GitHubinator",
-		"Google Spell Check",
-		"HackerTyper",
-		"Inline Google Translate",
-		"LaTeX-cwl",
+		"Handlebars",
 		"LaTeXing",
-		"LaTeXTools",
 		"LESS",
 		"oauthlib",
+		"Open in Default Application",
+		"Package Control",
 		"Ruby Block Converter",
 		"Ruby on Rails snippets",
-		"RubyEval",
 		"SCSS",
 		"SideBarEnhancements",
 		"SublimeERB",
 		"SublimeLinter",
-		"SublimeLinter-flake8",
 		"SublimeLinter-rubocop",
-		"Theme - Glacier",
+		"Tag",
 		"Theme - Soda",
-		"Vagrant"
+		"WordCount"
+	],
+	"repositories":
+	[
+		"https://github.com/randy3k/R-Box",
+		"https://github.com/randy3k/R-Box"
 	]
 }
