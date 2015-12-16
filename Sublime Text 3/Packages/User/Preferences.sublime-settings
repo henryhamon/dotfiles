@@ -45,8 +45,8 @@
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
+		"__pycache__",
 		".Rproj.user",
-		"data",
 		".git",
 		".svn",
 		".hg",
@@ -57,7 +57,8 @@
 		".rbx",
 		"bin",
 		"script",
-		"tmp"
+		"tmp",
+		"node_modules"
 	],
 	"font_face": "Monaco",
 	"font_options":
@@ -67,10 +68,7 @@
 	"font_size": 11.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"ignored_packages":
-	[
-		"Markdown"
-	],
+	"index_files": true,
 	"new_window_settings":
 	{
 		"show_minimap": false
