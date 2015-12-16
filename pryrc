@@ -1,19 +1,11 @@
-# gem install pry pry-doc pry-nay awesome_print
+# gem install pry pry-doc pry-nav awesome_print
 
 # Load plugins (only those I whitelist)
-Pry.config.should_load_plugins = false
+Pry.config.should_load_plugins = true
 Pry.plugins["doc"].activate!
 Pry.plugins["nav"].activate!
 
 Pry.config.history.file = "~/.pry_history"
-
-#Pry.config.prompt = proc do |obj, level, _|
-  #prompt = "\e[1;30m"
-  #prompt << "#{RUBY_VERSION} "
-  #prompt << "(#{level}|#{obj}) "
-  ##prompt << "#{Pry::NAV_PROMPT}"
-  #"#{prompt}>\e[0m "
-#end
 
 Pry.config.exception_handler = proc do |output, exception, _|
   output.puts "\e[31m#{exception.class}: #{exception.message}"
@@ -22,7 +14,7 @@ end
 
 begin
   require "awesome_print"
-  # Pry.config.print = proc {|output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output)}
+  Pry.config.print = proc { |output, value| Pry::Helpers::BaseHelpers.stagger_output("=> #{value.ai}", output) }
 rescue LoadError => err
    warn "=> Unable to load awesome_print"
 end
