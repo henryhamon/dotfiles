@@ -16,6 +16,9 @@ alias migrate="bundle exec rake db:migrate"
 alias pgstart="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pgstop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
+#Redis
+alias redisstart="redis-server /usr/local/etc/redis.conf"
+
 # Shell
 alias l="ls"
 alias cd..="cd .."
@@ -30,6 +33,8 @@ alias del="rm"
 if [ "$(uname)" == "Darwin" ]; then
   alias ls="gls --color"
   alias locate="mdfind"
+  alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+  alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 fi
 
 function chrome() {
