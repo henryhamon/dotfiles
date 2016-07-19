@@ -15,8 +15,11 @@ echo "Installing Essencial Command Line Tools ..."
 brew install git git-extras bash-git-prompt
 brew install bash coreutils findutils binutils
 brew install bash-completion
-brew install autoconf automake apple-gcc42
+brew install autoconf automake
 brew install the_silver_searcher
 brew install wget
+
+brew install homebrew/dupes/apple-gcc42
+brew install apple-gcc42
 
 brew cleanup
