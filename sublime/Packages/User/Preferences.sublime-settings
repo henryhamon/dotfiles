@@ -68,6 +68,7 @@
 	"font_size": 11.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
+	"ignored_packages": [ ],
 	"index_files": true,
 	"new_window_settings":
 	{

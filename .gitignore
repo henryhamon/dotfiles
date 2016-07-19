@@ -4,3 +4,4 @@ ssh/
 *.swp
 *.bkp
 *.local
+/locals

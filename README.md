@@ -1,8 +1,15 @@
-# Install
+# .alfakini dotfiles
+
+Dotfiles for Bash, command-line and programming tools I use.
+
+
+## Settings
+
+* `COMPUTER_NAME`: Your computer name
+* `locals/apps`: The list of apps you would like to install with `brew cask`
+
+## Installation
 
 ```bash
-./install.sh
+$ ./install
 ```
-
-* Install Command Line Tools https://developer.apple.com/downloads
-* Install Python http://www.lowindata.com/2013/installing-scientific-python-on-mac-os-x/

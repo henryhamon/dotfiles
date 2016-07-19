@@ -1,4 +1,4 @@
-Pry.config.history.file = "~/.pry_history"
+Pry.config.history.file = '~/.pry_history'
 Pry.config.should_load_plugins = true
 
 if defined?(PryByebug)

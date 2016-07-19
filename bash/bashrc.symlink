@@ -1,3 +1,10 @@
+export LANG="UTF-8"
+export LC_CTYPE="UTF-8"
+export LC_ALL=en_US.UTF-8
+
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # MAN PATH
+export EDITOR=subl
+
 # ALIASES
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
 
@@ -24,26 +31,14 @@ if [ "$TERM" != "dumb" ]; then
   export LS_OPTIONS='--color=auto'
 fi
 
-# CONFIGS
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # MAN PATH
-export ACKRC=".ackrc" # ACK PATH
-export EDITOR=subl
+# TAB COMPLETITION
+[ -f ~/.bin/git-completion.bash ] && . ~/.bin/git-completion.bash
 export FIGNORE="~:.pyc:.swp:.swa:.git" # things to ignore during tab completion
 
-export LANG="UTF-8"
-export LC_CTYPE="UTF-8"
-export LC_ALL=en_US.UTF-8
-
-# TAB COMPLETITION
-. ~/.bin/git-completion.bash
-
+#PATH
 PATH="$PATH:$HOME/.bin" # MY ~/.bin PATH
-PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin" # GNU CORE UTILS PATH
+PATH="/usr/local/bin:$PATH"
 export PATH
 
-# LANGS PATH
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home"
-export PATH="/Users/alfakini/Documents/Code/miniconda3/bin:$PATH" # added by Miniconda3 3.18.8 installer
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[ -f ~/.bash_local ] && . ~/.bash_local
