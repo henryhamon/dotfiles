@@ -23,15 +23,15 @@ sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.serve
 echo "Hiding the Time Machine, Volume, User, and Bluetooth icons"
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
   defaults write "${domain}" dontAutoLoad -array \
-    "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
-    "/System/Library/CoreServices/Menu Extras/Volume.menu" \
     "/System/Library/CoreServices/Menu Extras/User.menu"
 done
 defaults write com.apple.systemuiserver menuExtras -array \
   "/System/Library/CoreServices/Menu Extras/Bluetooth.menu" \
   "/System/Library/CoreServices/Menu Extras/AirPort.menu" \
   "/System/Library/CoreServices/Menu Extras/Battery.menu" \
-  "/System/Library/CoreServices/Menu Extras/Clock.menu"
+  "/System/Library/CoreServices/Menu Extras/Clock.menu" \
+  "/System/Library/CoreServices/Menu Extras/Volume.menu" \
+  "/System/Library/CoreServices/Menu Extras/TimeMachine.menu"
 
 echo "Hide the Spotlight icon"
 sudo chmod 600 /System/Library/CoreServices/Search.bundle/Contents/MacOS/Search
@@ -90,6 +90,9 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 echo "Setting trackpad & mouse speed to a reasonable number"
 defaults write -g com.apple.trackpad.scaling 2
 defaults write -g com.apple.mouse.scaling 2.5
+
+echo "Setting trackpad to tap mode"
+defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 1
 
 echo "Turn off keyboard illumination when computer is not used for 2.5 minutes"
 defaults write com.apple.BezelServices kDimTime -int 150
@@ -153,6 +156,7 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock "expose-group-by-app" -bool true
 
 echo "Setting Dock to auto-hide and removing the auto-hiding delay"
+defaults write com.apple.dock orientation -string "right"
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
@@ -222,15 +226,6 @@ sudo pmset -a standbydelay 86400
 
 echo "Disable annoying backswipe in Chrome"
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
-
-###############################################################################
-# Sublime Text
-###############################################################################
-
-echo "Linking Sublime Text command line"
-ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-echo "Setting Git to use Sublime Text as default editor"
-git config --global core.editor "subl -n -w"
 
 ###############################################################################
 # Kill affected applications
