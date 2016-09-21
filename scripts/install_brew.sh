@@ -12,7 +12,7 @@ brew update # Update homebrew recipes
 
 echo "Installing Essencial Command Line Tools ..."
 
-brew install git git-extras bash-git-prompt
+brew install git git-extras bash-git-prompt git-lfs
 brew install bash coreutils findutils binutils
 brew install bash-completion
 brew install autoconf automake
