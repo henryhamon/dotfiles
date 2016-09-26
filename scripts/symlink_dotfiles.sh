@@ -6,6 +6,8 @@
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 
+ln -sf "$DOTFILES_ROOT" "$HOME/.dotfiles"
+
 set -e
 
 echo ''
@@ -26,7 +28,7 @@ link_file () {
 
 install_dotfiles () {
   echo 'Installing dotfiles'
-  find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*' |
+  find -H "$HOME/.dotfiles" -maxdepth 2 -name '*.symlink' -not -path '*.git*' |
     while read -r src; do
       dst="$HOME/.$(basename "${src%.*}")"
       link_file "$src" "$dst"
