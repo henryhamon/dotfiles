@@ -85,6 +85,7 @@
 		120,
 		160
 	],
+	"show_definitions": true,
 	"show_full_path": true,
 	"soda_folder_icons": true,
 	"tab_size": 2,
