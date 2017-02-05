@@ -3,7 +3,7 @@ export LC_CTYPE="UTF-8"
 export LC_ALL=en_US.UTF-8
 
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH" # MAN PATH
-export EDITOR=subl
+export EDITOR=nvim
 
 # ALIASES
 [ -f ~/.bash_aliases ] && . ~/.bash_aliases
@@ -41,12 +41,13 @@ export LESS_TERMCAP_ue=$'\e'"[0m"
 export LESS_TERMCAP_us=$'\e'"[1;32m"
 
 # TAB COMPLETITION
-[ -f ~/.bin/git-completion.bash ] && . ~/.bin/git-completion.bash
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 export FIGNORE="~:.pyc:.swp:.swa:.git" # things to ignore during tab completion
 
 #PATH
 PATH="$PATH:$HOME/.bin" # MY ~/.bin PATH
-PATH="$PATH:/usr/local/opt/coreutils/libexec/gnubin" # GNU CORE UTILS PATH
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" # GNU CORE UTILS PATH
+PATH="/usr/local/opt/openssl/bin:$PATH" # OpenSSL
 PATH="/usr/local/bin:$PATH"
 export PATH
 

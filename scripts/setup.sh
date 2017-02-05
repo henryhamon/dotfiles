@@ -3,6 +3,8 @@
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
 
+ln -sf "$DOTFILES_ROOT" "$HOME/.dotfiles"
+
 set -e
 
 echo ''

@@ -1,31 +1,11 @@
 [
-  // ERB Toggle
-  { "keys": ["super+shift+."], "command": "erb", "context":
-    [
-      { "key": "selector", "operator": "equal", "operand": "text.html.ruby, text.haml, source.yaml, source.css, source.scss, source.js, source.coffee" }
-    ]
-  },
-   // Convert Ruby 1.8 hashes to Ruby 1.9 syntax
+  // Convert Ruby 1.8 hashes to Ruby 1.9 syntax
   {
     "keys": ["super+shift+h"],
-    "command": "hash_syntax"
-  },
-  // Insert 'binding.pry' with cmd+b+b, 'binding.remote_pry' with cmd+b+r
-  {
-    "keys": ["super+r", "super+b"],
-    "command": "insert_snippet",
-    "args": {"name": "Packages/User/snippets/pry.sublime-snippet"}
-  },
-  {
-    "keys": ["super+r", "super+r"],
-    "command": "insert_snippet",
-    "args": {"name": "Packages/User/snippets/pry_remote.sublime-snippet"}
+    "command": "ruby_toggle_hash_symbol"
   },
   {
     "keys": ["super+shift+'"],
-    "command": "change_quotes"
-  },
-  {
-    "keys": ["super+g","super+g"], "command": "git_commit_msg"
+    "command": "ruby_toggle_string"
   }
 ]

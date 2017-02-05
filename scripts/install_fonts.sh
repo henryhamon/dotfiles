@@ -27,7 +27,7 @@ link_file () {
 install_fonts () {
   echo 'Installing Fonts'
   dst="$HOME/Library/Fonts/"
-  link_file "$DOTFILES_ROOT/Fonts" "$dst"
+  link_file "$HOME/.dotfiles/Fonts" "$dst"
 }
 
 install_fonts

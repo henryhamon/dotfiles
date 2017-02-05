@@ -2,8 +2,7 @@
 
 echo "Installing Essencial Apps ..."
 
-brew tap caskroom/homebrew-cask
-brew install brew-cask
+brew install brew-cask-completion
 
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
