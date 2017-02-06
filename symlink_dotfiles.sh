@@ -3,14 +3,16 @@
 # Some things taken from here
 # https://github.com/caarlos0/dotfiles/blob/master/script/bootstrap
 
-cd "$(dirname "$0")/.."
-DOTFILES_ROOT=$(pwd -P)
+DOTFILES_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-ln -sf "$DOTFILES_ROOT" "$HOME/.dotfiles"
+if [ ! "$(readlink "$HOME/.dotfiles")" = "$DOTFILES_ROOT" ]; then
+  echo "Linking $DOTFILES_ROOT to $HOME/.dotfiles"
+  ln -sf "$DOTFILES_ROOT" "$HOME/.dotfiles"
+else
+  echo "Link $HOME/.dotfiles already exist"
+fi
 
 set -e
-
-echo ''
 
 link_file () {
   if [ -e "$2" ]; then

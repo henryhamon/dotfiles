@@ -18,10 +18,25 @@ brew "apple-gcc42"
 brew "autoconf"
 brew "automake"
 
+tap "homebrew/science"
+tap "homebrew/python"
+
+brew "python"
+brew "python3"
+
+brew "gpg"
+brew "gpg2"
 brew "the_silver_searcher"
 brew "wget"
 brew "tree"
 brew "nmap"
+
+brew "libtiff"
+brew "libjpeg"
+brew "imagemagick", args: ["--with-webp --with-fftw --with-librsvg --with-x11"]
+brew "graphviz", args: ["--with-librsvg --with-x11"]
+brew "gfortran"
+brew "freetype"
 
 cask "dropbox"
 cask "onedrive"
