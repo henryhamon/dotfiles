@@ -23,11 +23,19 @@ alias redisstart="redis-server /usr/local/etc/redis.conf"
 alias l="ls"
 alias cd..="cd .."
 alias ..="cd .."
+alias ~="cd ~"
+alias -- -="cd -"
 alias mkdir="mkdir -p"
 alias h=history
 alias e="exit"
 alias c="clear"
 alias del="rm"
+
+# List the 10 most recently changed files
+alias lsh="ls -t | head"
+
+# List the disk usage of files, sorted by their size
+alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)) {if($s<1024) {printf("%.1f",$s);print "$_\t$f"; last};$s=$s/1024}'\'
 
 # Mac
 if [ "$(uname)" == "Darwin" ]; then
