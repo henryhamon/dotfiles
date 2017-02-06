@@ -9,12 +9,12 @@ set -e
 
 echo ''
 
-sh ./scripts/symlink_dotfiles.sh
+sh ./setup/symlink_dotfiles.sh
 
 if [ "$(uname -s)" == "Darwin" ]; then
-  sh ./scripts/install_brew.sh
-  sh ./scripts/install_fonts.sh
-  sh ./scripts/install_apps.sh
+  sh ./setup/install_brew.sh
+  sh ./setup/install_fonts.sh
+  sh ./setup/install_apps.sh
 fi
 
 echo "Running custom install scripts"
@@ -25,5 +25,5 @@ find -H "$DOTFILES_ROOT" -maxdepth 2 -name 'install.sh' -not -path '*.git*' |
   done
 
 if [ "$(uname -s)" == "Darwin" ]; then
-  sh ./scripts/set_osx_defaults.sh
+  sh ./setup/set_osx_defaults.sh
 fi

@@ -2,10 +2,10 @@
 
 echo "Installing Essencial Apps ..."
 
-brew install brew-cask-completion
-
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)
+
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 apps=$(<"$DOTFILES_ROOT/locals/apps")
 

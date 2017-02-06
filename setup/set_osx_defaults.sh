@@ -140,6 +140,22 @@ defaults write com.apple.finder FXPreferredViewStyle Clmv
 echo "Avoiding the creation of .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
+echo "Show path bar"
+defaults write com.apple.finder ShowPathbar -bool true
+
+echo "Show status bar"
+defaults write com.apple.finder ShowStatusBar -bool true
+
+echo "Show icons for hard drives, servers, and removable media on the desktop"
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+
+echo "Set $HOME as the default location for new Finder windows"
+defaults write com.apple.finder NewWindowTarget -string "PfDe"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+
 ###############################################################################
 # Dock & Mission Control
 ###############################################################################
@@ -157,7 +173,7 @@ defaults write com.apple.dock expose-animation-duration -float 0.1
 defaults write com.apple.dock "expose-group-by-app" -bool true
 
 echo "Setting Dock to auto-hide and removing the auto-hiding delay"
-defaults write com.apple.dock orientation -string "right"
+defaults write com.apple.dock orientation -string "left"
 defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock autohide-delay -float 0
 defaults write com.apple.dock autohide-time-modifier -float 0
