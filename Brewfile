@@ -1,3 +1,5 @@
+cask_args appdir: '/Applications'
+
 brew "brew-cask-completion"
 
 brew "binutils"
@@ -13,8 +15,7 @@ brew "git"
 brew "git-extras"
 brew "git-lfs"
 
-tap "homebrew/dupes/apple-gcc42"
-brew "apple-gcc42"
+brew "homebrew/dupes/apple-gcc42"
 brew "autoconf"
 brew "automake"
 
@@ -35,15 +36,23 @@ brew "libtiff"
 brew "libjpeg"
 brew "imagemagick", args: ["--with-webp --with-fftw --with-librsvg --with-x11"]
 brew "graphviz", args: ["--with-librsvg --with-x11"]
-brew "gfortran"
 brew "freetype"
+
+brew "mas"
+mas "1Password", id: 443987910
+mas "Twitter", id: 409789998
+mas "Moom", id: 419330170
+mas "Pomodoro Times", id: 872515009
+mas "Xcode", id: 497799835
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Reeder 3", id: 880001334
 
 cask "dropbox"
 cask "onedrive"
 cask "google-drive"
 cask "iterm2"
 cask "little-snitch"
-cask "1password"
 cask "alfred"
 cask "caffeine"
 cask "cheatsheet"
@@ -52,15 +61,13 @@ cask "flux"
 cask "google-chrome"
 cask "grammarly"
 cask "grandperspective"
-cask "moom"
-cask "pgadmin3"
+cask "pgadmin4"
 cask "selfcontrol"
 cask "skitch"
 cask "skype"
 cask "slack"
 cask "sublime-text"
 cask "subtitle-master"
-cask "telegram"
 cask "the-unarchiver"
 cask "tower"
 cask "tunnelbear"
@@ -79,7 +86,6 @@ cask "firefox"
 cask "fluid"
 cask "microsoft-office"
 cask "vlc"
-cask "utorrent"
 cask "spotify"
 
 cask "qlcolorcode"

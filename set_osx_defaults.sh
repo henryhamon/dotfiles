@@ -7,7 +7,8 @@ COMPUTER_NAME='marvin'
 
 # Ask for the administrator password upfront
 sudo -v
-echo "This script will make your Mac awesome."
+echo ""
+echo "[INFO] This script will make your Mac awesome."
 
 
 ###############################################################################

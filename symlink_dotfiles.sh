@@ -5,11 +5,12 @@
 
 DOTFILES_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-if [ ! "$(readlink "$HOME/.dotfiles")" = "$DOTFILES_ROOT" ]; then
-  echo "Linking $DOTFILES_ROOT to $HOME/.dotfiles"
-  ln -sf "$DOTFILES_ROOT" "$HOME/.dotfiles"
+echo ""
+if [ -d "$HOME/.dotfiles" ]; then
+  echo "[INFO] Skipped, $HOME/.dotfiles already linked"
 else
-  echo "Link $HOME/.dotfiles already exist"
+  echo "[INFO] Linking $DOTFILES_ROOT to $HOME/.dotfiles"
+  ln -s "$DOTFILES_ROOT" "$HOME/.dotfiles"
 fi
 
 set -e
@@ -17,19 +18,19 @@ set -e
 link_file () {
   if [ -e "$2" ]; then
     if [ "$(readlink "$2")" = "$1" ]; then
-      echo "Skipped $1"
+      echo "[INFO] Skipped, $1 already linked"
       return 0
     else
       mv "$2" "$2.backup"
-      echo "Moved $2 to $2.backup"
+      echo "[INFO] Moved $2 to $2.backup"
     fi
   fi
   ln -sf "$1" "$2"
-  echo "Linked $1 to $2"
+  echo "[INFO] Linked $1 to $2"
 }
 
 install_dotfiles () {
-  echo 'Installing dotfiles'
+  echo "[INFO] Installing dotfiles"
   find -H "$HOME/.dotfiles" -maxdepth 2 -name '*.symlink' -not -path '*.git*' |
     while read -r src; do
       dst="$HOME/.$(basename "${src%.*}")"

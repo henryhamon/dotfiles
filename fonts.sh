@@ -1,11 +1,8 @@
 #!/bin/sh
 
-cd "$(dirname "$0")/.."
-DOTFILES_ROOT=$(pwd -P)
+DOTFILES_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 set -e
-
-echo ''
 
 link_file () {
   origin=$1
@@ -13,19 +10,20 @@ link_file () {
 
   if [ -e "$dst" ]; then
     if [ "$(readlink "$dst")" = "$origin" ]; then
-      echo "Skipped $origin"
+      echo "[INFO] Skipped, $origin already linked"
       return 0
     else
       sudo mv "$dst" "$dst.backup"
-      echo "Moved $dst to $dst.backup"
+      echo "[INFO] Moved $dst to $dst.backup"
     fi
   fi
   ln -sf "$origin" "$dst"
-  echo "Linked $origin to $dst"
+  echo "[INFO] Linked $origin to $dst"
 }
 
 install_fonts () {
-  echo 'Installing Fonts'
+  echo ""
+  echo "[INFO] Installing Fonts"
   dst="$HOME/Library/Fonts/"
   link_file "$HOME/.dotfiles/Fonts" "$dst"
 }
