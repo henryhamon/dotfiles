@@ -2,7 +2,7 @@
 	"auto_indent": true,
 	"bold_folder_labels": true,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
+	"color_scheme": "Packages/Boxy Theme/schemes/Boxy Tomorrow.tmTheme",
 	"detect_indentation": true,
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
@@ -45,6 +45,7 @@
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
+		"coverage",
 		"__pycache__",
 		".Rproj.user",
 		".git",
@@ -55,7 +56,6 @@
 		".bundle",
 		"bundle",
 		".rbx",
-		"bin",
 		"script",
 		"tmp",
 		"node_modules"
@@ -65,12 +65,9 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 11.0,
+	"font_size": 13.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
-	"ignored_packages":
-	[
-	],
 	"index_files": true,
 	"new_window_settings":
 	{
@@ -89,7 +86,26 @@
 	"show_full_path": true,
 	"soda_folder_icons": true,
 	"tab_size": 2,
-	"theme": "Soda Light 3.sublime-theme",
+	"theme": "Boxy Tomorrow.sublime-theme",
+	"theme_accent_mono": true,
+	"theme_find_panel_font_sm": true,
+	"theme_find_panel_size_xxs": true,
+	"theme_font_xs": true,
+	"theme_icons_flat": true,
+	"theme_quick_panel_size_md": true,
+	"theme_scrollbar_line": true,
+	"theme_sidebar_disclosure": true,
+	"theme_sidebar_folder_materialized": true,
+	"theme_sidebar_icon_saturation_hg": true,
+	"theme_sidebar_indent_md": true,
+	"theme_sidebar_size_xxs": true,
+	"theme_size_xs": true,
+	"theme_statusbar_font_sm": true,
+	"theme_statusbar_size_xl": true,
+	"theme_tab_font_sm": true,
+	"theme_tab_selected_underlined": true,
+	"theme_tab_size_md": true,
+	"theme_unified": true,
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"vintage_start_in_command_mode": true
