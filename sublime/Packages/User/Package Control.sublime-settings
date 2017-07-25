@@ -6,6 +6,7 @@
 	"installed_packages":
 	[
 		"A File Icon",
+		"Advanced CSV",
 		"All Autocomplete",
 		"Auto Close HTML Tags",
 		"AutoFileName",
@@ -17,10 +18,13 @@
 		"ChangeQuotes",
 		"Colorsublime",
 		"CSS Format",
+		"Cucumber",
 		"DashDoc",
 		"Dockerfile Syntax Highlighting",
 		"Duplicate Lines",
 		"Emmet",
+		"FileModifyStatus",
+		"FileSystem Autocompletion",
 		"GitGutter",
 		"GitHubinator",
 		"Gutter Color",
@@ -42,11 +46,13 @@
 		"SideBarEnhancements",
 		"SublimeERB",
 		"SublimeLinter",
+		"SublimeLinter-contrib-reek",
 		"SublimeLinter-rubocop",
 		"SyncedSideBar",
 		"Theme - Soda",
 		"TodoReview",
-		"TypeScript"
+		"TypeScript",
+		"Vintageous"
 	],
 	"repositories":
 	[

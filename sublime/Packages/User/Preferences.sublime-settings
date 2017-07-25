@@ -45,7 +45,9 @@
 	"find_selected_text": true,
 	"folder_exclude_patterns":
 	[
+		".cache",
 		"coverage",
+		"test/reports",
 		"__pycache__",
 		".Rproj.user",
 		".git",
@@ -65,9 +67,13 @@
 	[
 		"subpixel_antialias"
 	],
-	"font_size": 13.0,
+	"font_size": 12.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
 	"index_files": true,
 	"new_window_settings":
 	{
