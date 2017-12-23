@@ -19,18 +19,17 @@ brew 'homebrew/dupes/apple-gcc42'
 brew 'autoconf'
 brew 'automake'
 
-tap 'homebrew/science'
-tap 'homebrew/python'
+brew 'nvm'
+brew 'pyenv'
+brew 'yarn'
 
-brew 'python'
-brew 'python3'
-
+brew 'exa'
 brew 'gpg'
 brew 'gpg2'
-brew 'the_silver_searcher'
-brew 'wget'
-brew 'tree'
 brew 'nmap'
+brew 'the_silver_searcher'
+brew 'tree'
+brew 'wget'
 
 brew 'libtiff'
 brew 'libjpeg'
@@ -39,66 +38,68 @@ brew 'graphviz', args: ['--with-librsvg --with-x11']
 brew 'freetype'
 
 brew 'postgresql'
+brew 'redis'
 
 brew 'mas'
 mas '1Password', id: 443_987_910
-mas 'Twitter', id: 409_789_998
-mas 'Moom', id: 419_330_170
-mas 'Pomodoro Times', id: 872_515_009
-mas 'Xcode', id: 497_799_835
+mas 'Bear', id: 1_091_189_122
 mas 'Keynote', id: 409_183_694
+mas 'Moom', id: 419_330_170
 mas 'Numbers', id: 409_203_825
+mas 'Pomodoro Times', id: 872_515_009
 mas 'Reeder 3', id: 880_001_334
+mas 'Things 3', id: 904_280_696
+mas 'Twitter', id: 409_789_998
+mas 'Xcode', id: 497_799_835
 
-cask 'dropbox'
-cask 'onedrive'
-cask 'google-drive'
-cask 'iterm2'
-cask 'little-snitch'
+tap 'caskroom/fonts'
+tap 'caskroom/versions'
+
 cask 'alfred'
 cask 'caffeine'
 cask 'cheatsheet'
-cask 'evernote'
+cask 'cleanmymac'
+cask 'dash'
+cask 'docker'
+cask 'dropbox'
+cask 'endurance'
+cask 'firefoxnightly'
+cask 'fluid'
 cask 'flux'
 cask 'google-chrome'
+cask 'google-drive'
 cask 'grammarly'
 cask 'grandperspective'
+cask 'iterm2'
+cask 'licecap'
+cask 'little-snitch'
+cask 'microsoft-office'
+cask 'muzzle'
+cask 'ngrok'
+cask 'onedrive'
 cask 'pgadmin4'
 cask 'selfcontrol'
 cask 'skitch'
 cask 'skype'
 cask 'slack'
+cask 'spotify'
 cask 'sublime-text'
 cask 'subtitle-master'
+cask 'telegram'
 cask 'the-unarchiver'
 cask 'tower'
 cask 'tunnelbear'
-cask 'vagrant'
 cask 'virtualbox'
-
-cask 'lastfm'
-cask 'fullcontact'
-cask 'go2shell'
-cask 'cyberduck'
-cask 'dash'
-cask 'docker'
-cask 'cleanmymac'
-cask 'arduino'
-cask 'firefox'
-cask 'fluid'
-cask 'microsoft-office'
 cask 'vlc'
-cask 'spotify'
+cask 'whatsapp'
 
-cask 'ngrok'
-
-cask 'qlcolorcode'
-cask 'qlstephen'
-cask 'qlmarkdown'
-cask 'quicklook-json'
-cask 'qlprettypatch'
-cask 'quicklook-csv'
 cask 'betterzipql'
+cask 'qlcolorcode'
+cask 'qlmarkdown'
+cask 'qlprettypatch'
+cask 'qlstephen'
+cask 'quicklook-csv'
+cask 'quicklook-json'
 cask 'qlimagesize'
-cask 'webpquicklook'
 cask 'suspicious-package'
+cask 'webpquicklook'

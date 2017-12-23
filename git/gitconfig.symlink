@@ -37,6 +37,7 @@
 
 [alias]
 	amend = commit --amend -C HEAD
+	status = status -sb
 	st = status -sb
 	ci = commit
 	br = branch
@@ -52,25 +53,9 @@
 
 [mergetool]
 	keepBackup = true
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+
 [pull]
 	rebase = true
+
 [push]
 	default = current
-[filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
