@@ -9,6 +9,9 @@ if test $(which brew); then
 else
   echo "[INFO] Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+  xcode-select --install
+  sudo xcodebuild -license accept
 fi
 
 brew tap homebrew/bundle

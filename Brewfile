@@ -21,6 +21,7 @@ brew 'automake'
 
 brew 'nvm'
 brew 'pyenv'
+brew 'pyenv-virtualenv'
 brew 'yarn'
 
 brew 'exa'
@@ -46,7 +47,6 @@ mas 'Bear', id: 1_091_189_122
 mas 'Keynote', id: 409_183_694
 mas 'Moom', id: 419_330_170
 mas 'Numbers', id: 409_203_825
-mas 'Pomodoro Times', id: 872_515_009
 mas 'Reeder 3', id: 880_001_334
 mas 'Things 3', id: 904_280_696
 mas 'Twitter', id: 409_789_998
@@ -67,7 +67,7 @@ cask 'firefoxnightly'
 cask 'fluid'
 cask 'flux'
 cask 'google-chrome'
-cask 'google-drive'
+cask 'google-drive-file-stream'
 cask 'grammarly'
 cask 'grandperspective'
 cask 'iterm2'
@@ -83,17 +83,18 @@ cask 'skitch'
 cask 'skype'
 cask 'slack'
 cask 'spotify'
+cask 'steam'
 cask 'sublime-text'
 cask 'subtitle-master'
 cask 'telegram'
 cask 'the-unarchiver'
+cask 'toggl'
 cask 'tower'
 cask 'tunnelbear'
 cask 'virtualbox'
 cask 'vlc'
 cask 'whatsapp'
 
-cask 'betterzipql'
 cask 'qlcolorcode'
 cask 'qlmarkdown'
 cask 'qlprettypatch'
