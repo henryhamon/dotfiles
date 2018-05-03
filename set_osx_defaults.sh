@@ -3,7 +3,7 @@
 # Some things taken from here
 # https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 
-COMPUTER_NAME='marvin'
+COMPUTER_NAME='asimo'
 
 # Ask for the administrator password upfront
 sudo -v
