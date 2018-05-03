@@ -3,6 +3,8 @@ alias sublime="subl"
 # Bundler
 alias b="bundle"
 alias be="bundle exec"
+alias brs="be rails s"
+alias brc="be rails c"
 alias bake="be rake"
 alias best="be ruby -I test/"
 alias migratereset="bundle exec rake db:drop db:create db:migrate db:seed ; bundle exec spring stop"
@@ -22,6 +24,15 @@ alias redisstart="redis-server /usr/local/etc/redis.conf"
 
 # Git
 alias gitbranchda='git branch | egrep -v "(master|\*)" | xargs git branch -D'
+alias gst='git status'
+alias gcom='git commit -v'
+alias commit='git commit -v'
+alias glog='git log'
+
+# Go
+alias gbd='go build -i'
+alias ggt='go get'
+alias ggi='go install'
 
 # Shell
 alias l="ls"
@@ -43,7 +54,6 @@ alias duf='du -sk * | sort -n | perl -ne '\''($s,$f)=split(m{\t});for (qw(K M G)
 
 # Mac
 if [ "$(uname)" == "Darwin" ]; then
-  alias ls="exa"
   alias locate="mdfind"
   alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
   alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
