@@ -33,6 +33,7 @@ alias glog='git log'
 alias gbd='go build -i'
 alias ggt='go get'
 alias ggi='go install'
+alias gblnx='GOOS=linux GOARCH=amd64 go build'
 
 # Shell
 alias l="ls"
